@@ -1,21 +1,19 @@
-"Using Context In Components"
-import {TaskProvider} from './context/TaskContext';
-import TaskList from './components/TaskList';
+import React, {Suspense, lazy} from 'react';
+const TaskList = lazy(() => import('./components/TaskList'));
 
-import React from 'react';
+import React from 'react'
 
 const App = () => {
   return (
-    <TaskProvider>
-      <div className = "App">
-        <Headers/>
-        <TaskForm/>
-        <Filter/>
-        <TaskList/>
-        </div>
-    </TaskProvider>
+    <div className="App">
+      <Header/>
+      <Suspense fallback={<div>Loading ...</div>}>
+      <TaskList/>
+      </Suspense>
+      </div>
   );
 };
 
 export default App;
 
+     
