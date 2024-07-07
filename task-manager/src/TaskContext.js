@@ -1,3 +1,4 @@
+"Using React Context for Global State"
 "React context provides a way to share state across the entire application without prop drilling"
 "state management is a critical aspect of react applications. React provides the useState and the useReducer"
 "hooks for managing the component state. For larger applications,you might use a state management library like Redux or Mobx"
